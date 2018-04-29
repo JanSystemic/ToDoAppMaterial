@@ -17,10 +17,7 @@
           <th>Priority</th>
         </thead>
         <tr *ngFor="let Todo of TodoList ">
-         <!-- <td>{{Todo.Done}}></td> -->
-         
-         <!-- <td><input type="checkbox" [checked]="Todo.Done" [disabled]="false"></td> -->
-         <td><mat-checkbox [checked]="Todo.Done" ></mat-checkbox></td>
+         <td><mat-checkbox [checked]="Todo.Done" [(ngModel)]='Todo.Done'></mat-checkbox></td>
           <td>{{Todo.Task}}</td>
           <td>{{Todo.Time | date: 'EE, MMM dd'}}</td>
           <td>{{Todo.Priority}}</td>
