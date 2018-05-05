@@ -16,9 +16,9 @@
           <th>Time</th>
           <th>Priority</th>
         </thead>
-        <tr *ngFor="let Todo of TodoList ">
+        <tr *ngFor="let Todo of TodoList " [ngClass]="{'completed':Todo.Done}">
          <td><mat-checkbox [checked]="Todo.Done" [(ngModel)]='Todo.Done'></mat-checkbox></td>
-          <td>{{Todo.Task}}</td>
+          <td >{{Todo.Task}}</td>
           <td>{{Todo.Time | date: 'EE, MMM dd'}}</td>
           <td>{{Todo.Priority}}</td>
           <td><mat-icon (click)="editTodo(Todo.Nr)">edit</mat-icon></td>
